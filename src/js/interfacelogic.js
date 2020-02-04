@@ -30,3 +30,172 @@ export function displayPairs(cards) {
   }
   return gameDisplay.html(cardsHtml);
 }
+
+export function listen() {
+  
+  clicksListen();
+   }
+
+    export function clicksListen(){
+      let numberOfClicks = 0;
+  let firstCardValue  =  "";
+  let secondCardValue = "";
+      $("#game-display").on("click", ".card > p",function() {
+        // numberOfClicks++;
+        if(numberOfClicks === 1) {
+          firstCardValue = $(this).text();
+          console.log(numberOfClicks);
+        }});
+  
+        $("#game-display").on("click", ".card > p",function() {
+          numberOfClicks++;
+          if(numberOfClicks % 2 === 0) {
+            firstCardValue = $(this).text();
+            console.log(numberOfClicks);
+            alert("match");
+            listen();
+          }
+        });
+    }
+//         else if (numberOfClicks === 1) {
+//         secondCardValue = $(this).text();
+//       }
+//   });
+
+// }
+  // else if(numberOfClicks === 1) {
+  //   $("#game-display").on("click", ".card > p",function() {
+  //     secondCardValue = $(this).text();
+  //     console.log(numberOfClicks);
+  //     console.log(secondCardValue);
+
+  //     if(firstCardValue === secondCardValue) {
+  //       alert("match");
+  //     } else {
+  //       alert("no match");
+  //       listen();
+  //     }
+  //   })}
+
+//   }
+//   $("#game-display").on("click", ".card > p",function() {
+//   if(numberOfClicks === 0) {
+//     firstCardValue = $(this).text();
+//   }}; 
+  
+//   else {
+//     secondCardValue = $(this).text();
+//   }
+//   if(firstCardValue === secondCardValue) {
+//     alert("match");
+//     listen();
+//   } else {
+//     alert("no match");
+//     listen();
+//   }
+// });
+// }
+//   $("#game-display").on("click", ".card > p",function() {
+//     //firstCardValueHtml = $(this);
+//     //firstCardValueHtml.hide();
+//     //firstCardValueHtml.show();
+//     let firstCardValue = $(this).text();
+//     console.log(firstCardValue);
+//     //firstCardValue = firstCard;
+//     listenToSecondClick();
+//   });
+  
+//   $(this).text();
+
+//   listenToCards();
+// }
+
+// export function listenToFirstClick() {
+//   $("#game-display").on("click", ".card > p",function() {
+//     //firstCardValueHtml = $(this);
+//     //firstCardValueHtml.hide();
+//     //firstCardValueHtml.show();
+//     let firstCardValue = $(this).text();
+//     console.log(firstCardValue);
+//     //firstCardValue = firstCard;
+//     listenToSecondClick();
+//   });
+// }
+
+// export function listenToSecondClick(firstCard) {
+//   $("#game-display").on("click", ".card > p", function() {
+//     let secondCard = $(this).text();
+//     if(firstCard === secondCard) {
+//       alert("match");
+//       listen();
+//     } else {
+//       alert("no match");
+//       listen();
+//     }
+//   });
+// }
+
+// export function listenToCards() {
+//   //if ((numberOfClicks % 2) === 0){
+//     $("#game-display").on("click", ".card > p",function() {
+
+//       //firstCardValueHtml = $(this);
+//       //firstCardValueHtml.hide();
+//       //firstCardValueHtml.show();
+//       let firstCardValue = $(this).text();
+//       console.log(firstCardValue);
+//       //firstCardValue = firstCard;
+//       listenToSecondClick();
+//     });
+//  // } 
+//   }
+// export function clickCounter(){
+//   let numberOfClicks= 0;
+//   $("#game-display").on("click", ".card > p",function() {
+//     numberOfClicks++;
+//     console.log(numberOfClicks);
+//     return numberOfClicks;
+//   })
+//   return numberOfClicks;
+// }
+
+// export function listenToSecondClick(firstCard) {
+//   $("#game-display").on("click", ".card > p", function() {
+//     let secondCard = $(this).text();
+//     if(firstCard === secondCard) {
+//       alert("match");
+//       listen();
+//     } else {
+//       alert("no match");
+//       listen();
+//     }
+//   });
+// }
+
+
+
+
+// // else if (numberOfClicks === 1){
+// //     $("#game-display").on("click", ".card > p", function() {
+// //       alert("Second listener");
+// //       secondCardValueHtml = $(this);
+// //       let secondCard = $(this).text();
+// //       secondCardValue = secondCard;
+// //       console.log(secondCard + "2");
+// //       if(firstCardValue === secondCardValue) {
+// //         firstCardValueHtml.show();
+// //         secondCardValueHtml.show();
+// //         numberOfClicks = 0;
+// //         firstCardValue = "";
+// //         secondCardValue = "";
+// //         firstCardValueHtml = "";
+//         secondCardValueHtml = "";
+//       } else {
+//         numberOfClicks = 0;
+//         firstCardValue = "";
+//         secondCardValue = "";
+//         firstCardValueHtml = "";
+//         secondCardValueHtml = "";
+//       }
+//     });
+//   }
